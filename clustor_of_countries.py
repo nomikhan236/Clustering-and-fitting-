@@ -5,10 +5,45 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 def perform_clustering_and_visualization(data_file, num_clusters, countries_to_compare):
+
+    """
+    1st Docstring
+    Performs clustering and visualization.
+
+    Args:
+        data_file (str): The path to the CSV file containing COVID-19 data.
+        num_clusters (int): The number of clusters to create.
+        countries_to_compare (list): A list of tuples specifying the countries and cluster IDs to compare.
+
+    Returns:
+        None
+    """
+
+    """
+    2nd Docstring
+    Performs clustering and visualization.
+
+    This function reads the provided CSV file containing COVID-19 data, performs clustering using KMeans algorithm,
+    and visualizes the clusters on a scatter plot. It also compares countries within clusters based on selected
+    variables, identifies one country from each cluster, and performs additional analysis and visualization.
+
+    Args:
+        data_file (str): The path to the CSV file containing COVID-19 data.
+        num_clusters (int): The number of clusters to create.
+        countries_to_compare (list): A list of tuples specifying the countries and cluster IDs to compare.
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If the specified data file is not found.
+    """
+
+
     # Read the data
     df = pd.read_csv(data_file)
-    
-    df.transpose()
+
+    df = df.transpose()
 
     # Select the columns for clustering
     columns_for_clustering = df.columns[4:-1]
