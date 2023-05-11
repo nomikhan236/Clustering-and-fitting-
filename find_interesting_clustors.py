@@ -5,6 +5,25 @@ from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 
 def perform_clustering(data_file):
+    """Performs clustering on a dataset to find interesting clusters of data based on CO2 emissions.
+
+    This function reads the data from a CSV file, selects relevant columns for clustering, and preprocesses the data.
+    It applies a clustering method (in this case, K-means) to identify clusters based on CO2 emissions.
+    The function then adds the cluster labels to the DataFrame and produces a plot showing the cluster membership
+    and cluster centers."""
+
+    """Doc 2: 
+    Args:
+        data_file (str): The path to the CSV file containing the data.
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If the specified data file is not found.
+    """
+
+    
     # Read the data into a DataFrame
     data = pd.read_csv(data_file)
 
