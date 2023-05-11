@@ -7,6 +7,8 @@ from sklearn.preprocessing import StandardScaler
 def perform_clustering_and_visualization(data_file, num_clusters, countries_to_compare):
     # Read the data
     df = pd.read_csv(data_file)
+    
+    df.transpose()
 
     # Select the columns for clustering
     columns_for_clustering = df.columns[4:-1]
