@@ -6,6 +6,31 @@ from scipy.stats import t
 
 
 def fit_and_predict(data, degree, future_years, alpha=0.05):
+
+    """
+        Fits a simple model to the data using curve_fit and generates predictions for future time points.
+
+    This function fits a simple model to the given data using curve_fit function from scipy.optimize.
+    The model can represent time series or a relationship between two attributes, such as exponential growth,
+    logistic function, or low order polynomials. The function utilizes the attached err_ranges function
+    to estimate lower and upper limits of the confidence range for the predictions.
+    """
+     
+    """    
+    Doc 2:
+    Args:
+        data (str): The path to the CSV file containing the data.
+        degree (int): The degree of the polynomial or complexity of the model.
+        future_years (int): The number of years to predict into the future.
+        alpha (float, optional): The significance level for confidence intervals. Default is 0.05.
+
+    Returns:
+        None
+
+    Raises:
+        FileNotFoundError: If the specified data file is not found."""
+
+
     # Step 2: Read the data sample into a pandas DataFrame
     df = pd.read_csv(data)
     
